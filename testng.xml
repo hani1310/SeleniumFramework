@@ -3,7 +3,7 @@
 <suite name="smoke-test suit" preserve-order="true">
 	<test name="smoke-test" preserve-order="true">
 		<classes>
-		<class name="com.resowl.web.functional.SampleTestCase" />
+		<class name="com.resowl.web.functional.CheckBoxTest" />
 		</classes>
 	</test>
 </suite>

@@ -49,7 +49,7 @@ public class SampleTestCase extends BaseTest {
 
 	@AfterClass
 	public void tearDown() {
-		closeBrowser();
+		
 	}
 
 }

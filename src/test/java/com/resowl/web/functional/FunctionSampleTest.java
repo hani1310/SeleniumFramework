@@ -49,7 +49,7 @@ public class FunctionSampleTest extends BaseTest {
 
 	@Test
 	public void test1() throws InterruptedException {
-		System.out.println("Test1");
+		System.out.println("Test running ");
 
 		String x = driver.findElement(By.id("temperature")).getText();
 		System.out.println(x);
@@ -104,7 +104,9 @@ public class FunctionSampleTest extends BaseTest {
 
 			driver.findElement(By.id("//button[text()='submitButton']")).click();
 
-		} else if (tempInt >= 35) {
+		} 
+		
+		else if (tempInt >= 35) {
 
 			driver.findElement(By.xpath("//button[text()='Buy sunscreens']")).click();
 			Thread.sleep(1500);

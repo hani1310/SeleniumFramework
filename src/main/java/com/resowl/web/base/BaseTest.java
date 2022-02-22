@@ -47,9 +47,11 @@ public class BaseTest {
 		return prop.getProperty("browser");
 	}
 	
+	
 	public static String getUrl() {
 		return prop.getProperty("url");
 	}
+
 	
 	
 	/**
@@ -79,7 +81,5 @@ public class BaseTest {
 		}
 	}
 	
-	public static void closeBrowser() {
-		driver.close();
-	}
+	
 }

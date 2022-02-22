@@ -11,8 +11,12 @@ public class WelcomePage extends BasePage{
 	
 	
 	
+	
 	@FindBy(linkText = "Add/Remove Elements")
 	private WebElement addRemoveElementLink;
+	
+	@FindBy(linkText = "Checkboxes")
+	private WebElement checkboxesLink;
 	
 	public WelcomePage() {
 		PageFactory.initElements(driver, this);
@@ -26,6 +30,15 @@ public class WelcomePage extends BasePage{
 		return addRemoveElementLink;
 	}
 	
+	
+	/**
+	 * Gettter for checkbox link
+	 * @return
+	 */
+	public WebElement getCheckboxesLink() {
+		return checkboxesLink;
+	}
+
 	/**
 	 * CLick on add remove element link
 	 * @return
@@ -33,6 +46,14 @@ public class WelcomePage extends BasePage{
 	public AddRemovePage clickAddRemoveElement() {
 		clickElement(getAddRemoveElementLink());
 		return new AddRemovePage();
+	}
+	/**
+	 * Click on Checkbox link 
+	 * @return
+	 */
+	public CheckBoxPage clickCheckboxLink() {
+		clickElement(getCheckboxesLink());
+		return new CheckBoxPage();
 	}
 
 }
