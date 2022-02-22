@@ -36,20 +36,20 @@ public class CheckBoxTest<Checkboxes> extends BaseTest {
 		WelcomePage welcomePo = new WelcomePage();
 		checkboxPo = welcomePo.clickCheckboxLink();
 		
-//		isChecked = e.findElement((SearchContext) By.xpath("/html/body/div[2]/div/div/form/input[1]")).isSelected();
-//
-//		isChecked = e.findElement((SearchContext) By.xpath("/html/body/div[2]/div/div/form/input[2]")).isSelected();
-		if (! ((WebElement) driver.findElements(By.xpath("//*[@id=\"checkboxes\"]/input[1]"))).isSelected());
-			
-		{
-			driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[2]")).click();
-		}
-
+		WebElement Checksbox=driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[1]"));
+		Checksbox.click();
+		Thread.sleep(5000);
+		
+		WebElement Checkbox2=driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[2]"));
+		Checkbox2.click();
+		
+	
+		
 	}
 
 	@AfterClass
 	public void tearDown() {
-	
+		
 
 	}
 }

@@ -12,11 +12,13 @@ public class BasePage extends BaseTest {
 	public void waitElement(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(element));
+		
 	}
 
 	public void clickElement(WebElement element) {
 		waitElement(element);
 		element.click();
 	}
+
 
 }

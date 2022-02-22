@@ -10,13 +10,13 @@ import org.openqa.selenium.support.PageFactory;
 import com.resowl.web.base.BasePage;
 
 public class CheckBoxPage extends BasePage {
-	
+
 	@FindBy(linkText = "Checkboxes")
 	private WebElement checkboxesLink;
 
-	public CheckBoxPage()  {
+	public CheckBoxPage() {
 		PageFactory.initElements(driver, this);
 		
-		
+
 	}
 }
