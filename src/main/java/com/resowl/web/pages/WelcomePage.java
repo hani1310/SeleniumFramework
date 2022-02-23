@@ -17,9 +17,7 @@ public class WelcomePage extends BasePage {
 	@FindBy(linkText = "Checkboxes")
 	private WebElement checkboxesLink;
 
-	@FindBy(linkText = "checkboxes1")
-	private WebElement checkboxesLink1;
-
+	
 	public WelcomePage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -52,29 +50,16 @@ public class WelcomePage extends BasePage {
 		return new AddRemovePage();
 	}
 
-	/**
-	 * Click on Checkbox link
-	 * 
-	 * @return
-	 */
+//	/**
+//	 * Click on Checkbox link
+//	 * 
+//   * @return
+//	 */
 	public CheckBoxPage clickCheckboxLink() {
 		clickElement(getCheckboxesLink());
 		return new CheckBoxPage();
 	}
 
-	/**
-	 * Click on check tick
-	 * 
-	 * @return
-	 */
-	public Checkbox clickCheckboxesLink1() {
-		clickElement(clickCheckboxesLink1());
-		return new Checkbox();
-	}
-
-	private void clickElement(Checkbox clickCheckboxesLink1) {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 }

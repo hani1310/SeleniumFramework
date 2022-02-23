@@ -1,6 +1,5 @@
 package com.resowl.web.functional;
 
-import java.awt.Checkbox;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -18,7 +17,7 @@ import com.resowl.web.pages.WelcomePage;
 public class CheckBoxTest<Checkboxes> extends BaseTest {
 
 	CheckBoxPage checkboxPo;
-	Checkbox checkboxesPo;
+	CheckBoxPage test1;
 
 	public CheckBoxTest() throws IOException {
 		super();
@@ -35,14 +34,18 @@ public class CheckBoxTest<Checkboxes> extends BaseTest {
 	public void testCheckElements() throws InterruptedException {
 		WelcomePage welcomePo = new WelcomePage();
 		checkboxPo = welcomePo.clickCheckboxLink();
+		
+		
+//	@Test
+//	public void testChecked() {
+//		CheckBoxPage test1 = new CheckBoxPage();
+//		test1.clickCheckboxLink1();
+//	}
+
 
 	}
 
-	public void testCheckElements1() {
-		WelcomePage welcomePo = new WelcomePage();
-		checkboxesPo = welcomePo.clickCheckboxesLink1();
-
-	}
+	
 
 	@AfterClass
 	public void tearDown() {
