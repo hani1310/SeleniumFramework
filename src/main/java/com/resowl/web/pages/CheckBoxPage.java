@@ -14,9 +14,11 @@ public class CheckBoxPage extends BasePage {
 	@FindBy(linkText = "Checkboxes")
 	private WebElement checkboxesLink;
 
+	@FindBy(linkText = "checkboxes1")
+	private WebElement checkboxesLink1;
+
 	public CheckBoxPage() {
 		PageFactory.initElements(driver, this);
-		
 
 	}
 }
