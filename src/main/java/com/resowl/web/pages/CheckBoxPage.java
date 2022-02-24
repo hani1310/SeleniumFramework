@@ -1,6 +1,7 @@
 package com.resowl.web.pages;
 
 import java.sql.Driver;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -15,29 +16,37 @@ public class CheckBoxPage extends BasePage {
 	@FindBy(linkText = "Checkboxes")
 	private WebElement checkboxesLink;
 
-	@FindBy(linkText = "checkboxes1")
-	private WebElement checkboxesLink1;
-
+	@FindBy(xpath = "//input[@type='checkbox']")
+	List<WebElement> checked;
+	
+	
 	public void CheckBoxPage() {
-		PageFactory.initElements(driver, this);
+	PageFactory.initElements(driver, this);
 	}
 
-	public CheckBoxPage clickCheckboxLink1() {
-		clickElement(getCheckboxesLink());
-		return new CheckBoxPage();
+	/**
+	 * Getter for checkbox link
+	 * 
+	 * @return
+	 */
+	
+	public WebElement getCheckboxesLink() {
+		return checkboxesLink ;
 	}
 
-	@FindBy(linkText = "checkboxes ")
-	private WebElement checkboxes1Link;
-
-	private WebElement getCheckboxesLink() {
-		// TODO Auto-generated method stub
-		return null;
+	/**
+	 * click checked box
+	 * 
+	 * @return
+	 */
+	public List<WebElement> getChecked() {
+		
+		if ( !driver.findElement(By.xpath("//input[@type=' checkbox 1\r\n"+ "']")).isSelected() )
+		{
+		     driver.findElement(By.xpath("//input[@type=' checkbox 2\r\n"+ "']")).click();
+		}
+		return checked;
+		
 	}
-
-	public void clickCheckboxLink() {
-		// TODO Auto-generated method stub
-
-	}
-
+  
 }

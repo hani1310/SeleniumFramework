@@ -34,18 +34,8 @@ public class CheckBoxTest<Checkboxes> extends BaseTest {
 	public void testCheckElements() throws InterruptedException {
 		WelcomePage welcomePo = new WelcomePage();
 		checkboxPo = welcomePo.clickCheckboxLink();
-		
-		
-//	@Test
-//	public void testChecked() {
-//		CheckBoxPage test1 = new CheckBoxPage();
-//		test1.clickCheckboxLink1();
-//	}
-
 
 	}
-
-	
 
 	@AfterClass
 	public void tearDown() {
