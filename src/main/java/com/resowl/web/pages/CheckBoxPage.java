@@ -18,35 +18,27 @@ public class CheckBoxPage extends BasePage {
 
 	@FindBy(xpath = "//input[@type='checkbox']")
 	List<WebElement> checked;
-	
-	
+
 	public void CheckBoxPage() {
-	PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);
 	}
 
-	/**
-	 * Getter for checkbox link
-	 * 
-	 * @return
-	 */
-	
 	public WebElement getCheckboxesLink() {
-		return checkboxesLink ;
+
+		return checkboxesLink;
 	}
 
-	/**
-	 * click checked box
-	 * 
-	 * @return
-	 */
 	public List<WebElement> getChecked() {
-		
-		if ( !driver.findElement(By.xpath("//input[@type=' checkbox 1\r\n"+ "']")).isSelected() )
-		{
-		     driver.findElement(By.xpath("//input[@type=' checkbox 2\r\n"+ "']")).click();
-		}
 		return checked;
-		
 	}
-  
+
+	public void clickCheckboxLink() {
+		
+
+	}
+
+	public boolean isSelected() {
+		return true;
+	}
+
 }

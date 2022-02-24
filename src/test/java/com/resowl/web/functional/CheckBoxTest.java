@@ -7,6 +7,7 @@ import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -34,11 +35,14 @@ public class CheckBoxTest<Checkboxes> extends BaseTest {
 	public void testCheckElements() throws InterruptedException {
 		WelcomePage welcomePo = new WelcomePage();
 		checkboxPo = welcomePo.clickCheckboxLink();
+		checkboxPo.clickCheckboxLink();
+		Assert.assertTrue(checkboxPo.isSelected());
 
 	}
 
 	@AfterClass
-	public void tearDown() {
-
+	public void afterClass() {
+//		driver.close();
 	}
+
 }
