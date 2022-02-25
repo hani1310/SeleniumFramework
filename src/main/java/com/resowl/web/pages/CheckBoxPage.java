@@ -17,28 +17,67 @@ public class CheckBoxPage extends BasePage {
 	private WebElement checkboxesLink;
 
 	@FindBy(xpath = "//input[@type='checkbox']")
-	List<WebElement> checked;
+	List<WebElement> checkboxButtons;
 
 	public void CheckBoxPage() {
 		PageFactory.initElements(driver, this);
+
+		/**
+		 * Logic of Checked and unchecked
+		 * 
+		 */
+
+		if (!((WebElement) driver.findElements(By.xpath("//input[@type='checkbox']"))).isSelected()) {
+			driver.findElement(By.xpath("\"//input[@type='checkbox']")).click();
+		}
+
 	}
 
-	public WebElement getCheckboxesLink() {
+	/**
+	 * GetCheckbox Button
+	 * 
+	 * @return
+	 */
+	public List<WebElement> getCheckboxButtons() {
+		return checkboxButtons;
+	}
 
+	/**
+	 * Getter for Checkbox link
+	 * 
+	 * @return
+	 */
+	public WebElement getcheckboxesLink() {
 		return checkboxesLink;
 	}
 
-	public List<WebElement> getChecked() {
-		return checked;
+	/**
+	 * Click on Checkbox Button
+	 * 
+	 * @return
+	 */
+	public CheckBoxPage clickcheckboxesButton() {
+		clickElement(getcheckboxesLink());
+		return new CheckBoxPage();
 	}
 
-	public void clickCheckboxLink() {
-		
+	/**
+	 * get delete buttons on the page
+	 * 
+	 * @return
+	 */
+	public int getCheckboxCount() {
+		return getCheckboxButtons().size();
 
 	}
 
-	public boolean isSelected() {
-		return true;
+	/**
+	 * Click on Check button on the index
+	 * 
+	 * @param index
+	 */
+	public void clickCheckboxButton(int index) {
+		clickElement(getCheckboxButtons().get(index));
 	}
 
 }

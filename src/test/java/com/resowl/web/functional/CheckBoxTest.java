@@ -18,7 +18,6 @@ import com.resowl.web.pages.WelcomePage;
 public class CheckBoxTest<Checkboxes> extends BaseTest {
 
 	CheckBoxPage checkboxPo;
-	CheckBoxPage test1;
 
 	public CheckBoxTest() throws IOException {
 		super();
@@ -35,8 +34,14 @@ public class CheckBoxTest<Checkboxes> extends BaseTest {
 	public void testCheckElements() throws InterruptedException {
 		WelcomePage welcomePo = new WelcomePage();
 		checkboxPo = welcomePo.clickCheckboxLink();
-		checkboxPo.clickCheckboxLink();
-		Assert.assertTrue(checkboxPo.isSelected());
+		checkboxPo.clickcheckboxesButton();
+
+	}
+
+	@Test
+	public void testCheckElement() {
+		checkboxPo.clickCheckboxButton(0);
+		int clickCheckboxButton = checkboxPo.getCheckboxCount();
 
 	}
 
