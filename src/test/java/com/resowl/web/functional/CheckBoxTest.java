@@ -35,14 +35,17 @@ public class CheckBoxTest<Checkboxes> extends BaseTest {
 		WelcomePage welcomePo = new WelcomePage();
 		checkboxPo = welcomePo.clickCheckboxLink();
 		checkboxPo.clickcheckboxesButton();
-
+		int CheckboxCount = checkboxPo.getCheckboxCount();
+		Assert.assertEquals(CheckboxCount, true);
+		hardWait(2000);
 	}
 
 	@Test
 	public void testCheckElement() {
-		checkboxPo.clickCheckboxButton(0);
-		int clickCheckboxButton = checkboxPo.getCheckboxCount();
-
+		checkboxPo.clickCheckboxButton(1);
+		int CheckboxCount = checkboxPo.getCheckboxCount();
+		System.out.println("2 checked");
+		Assert.assertEquals(CheckboxCount,false);
 	}
 
 	@AfterClass

@@ -50,11 +50,11 @@ public class WelcomePage extends BasePage {
 		return new AddRemovePage();
 	}
 
-//	/**
-//	 * Click on Checkbox link
-//	 * 
-//   * @return
-//	 */
+	/**
+	 * Click on Checkbox link
+	 * 
+   * @return
+	 */
 	public CheckBoxPage clickCheckboxLink() {
 		clickElement(getCheckboxesLink());
 		return new CheckBoxPage();
